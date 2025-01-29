@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Título centrado y destacado -->
+            <h1 class="text-center font-weight-bolder mb-4">{{ blog.titulo }}</h1>
+
+            <!-- Detalles del blog -->
+            <p class="text-center"><strong>Autor:</strong> {{ blog.autor }}</p>
+            <p class="text-center"><strong>Fecha de Publicación:</strong> {{ blog.fecha_de_publicacion }}</p>
+
+            <!-- Contenido del blog -->
+            <p class="lh-lg">{{ blog.contenido }}</p>
+
+            <!-- Botón para volver a la lista -->
+            <div class="text-center mt-4">
+                <a href="{% url 'blog' %}" class="btn btn-primary">Volver a la lista</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Proyecto_detalle{% endblock %}
+
+{% block content %}
+
+<h1>{{ proyecto.titulo }}</h1>
+
+<p><strong>Descripción:</strong> {{ proyecto.descripcion }}</p>
+<p><strong>Fecha de inicio:</strong> {{ proyecto.fecha_de_inicio }}</p>
+<p><strong>Fecha de fin:</strong> {{ proyecto.fecha_de_finalizacion }}</p>
+<p><strong>Estado actual:</strong> {{ proyecto.estado_actual }}</p>
+
+<a href="{% url 'proyectos' %}">Volver a la lista de proyectos</a>
+
+{% endblock %}

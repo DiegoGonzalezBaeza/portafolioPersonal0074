@@ -1,0 +1,141 @@
+.card-body {
+    padding: 2rem; /* Ajusta el padding según sea necesario */
+}
+
+.form-control {
+    width: 100%; /* Asegura que los inputs ocupen el 100% del ancho */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+}
+
+
+    .card {
+        background-color: #f8f9fa;
+    }
+
+    .card-header {
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 0.375rem 0.375rem 0 0;
+    }
+
+    .btn-primary {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+    .btn-primary:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+
+    /* Estilo para las imágenes dentro de las cards */
+    .card-img {
+        width: 100%;      /* Ajusta el ancho al 100% del contenedor de la imagen */
+        max-width: 300px; /* Limita el tamaño máximo de las imágenes a 300px de ancho */
+        height: auto;     /* Mantiene la proporción de la imagen */
+        margin: 0 auto;   /* Centra la imagen si es más pequeña que el contenedor */
+    }
+
+    main {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    main.loaded {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    
+    
+        /* Tema claro (por defecto) */
+        .jumbotron {
+            background-color: #f8f9fa; /* Claro */
+            color: #212529;           /* Texto oscuro */
+        }
+    
+    /* Tema oscuro */
+    body.dark-theme .jumbotron {
+        background-color: #343a40; /* Oscuro */
+        color: #ffffff;            /* Texto claro */
+    }
+        
+    
+    /* Tema oscuro */
+        body.dark-theme {
+        background-color: #121212;
+        color: #ffffff;
+        }
+    
+        .bg-light {
+            background-color: #f8f9fa !important; /* Fondo claro */
+            color: #212529 !important;           /* Texto oscuro */
+        }
+        .bg-light .nav-link {
+            color: #212529 !important;           /* Color de enlaces en tema claro */
+        }
+        .bg-light .nav-link:hover {
+            color: #007bff !important;           /* Hover en tema claro */
+        }
+        
+        /* Tema oscuro */
+        body.dark-theme .bg-light {
+            background-color: #001429 !important; /* Fondo oscuro */
+            color: #ffffff !important;            /* Texto claro */
+        }
+        body.dark-theme .bg-light .nav-link {
+            color: #ffffff !important;            /* Color de enlaces en tema oscuro */
+        }
+        body.dark-theme .bg-light .nav-link:hover {
+            color: #17a2b8 !important;            /* Hover en tema oscuro */
+        }
+    
+    /* Tema claro */
+    body .bg-light.border-right {
+        border-right: 1px solid #dee2e6 !important;
+    }
+    
+    /* Tema oscuro */
+    body.dark-theme .bg-light.border-right {
+        border-right: 1px solid #001124 !important;
+    }
+
+/* Navbar en modo claro */
+.navbar-light .navbar-nav .nav-link {
+    color: #212529; /* Color de los enlaces en modo claro */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #007bff; /* Color de los enlaces cuando están en hover en modo claro */
+}
+
+/* Navbar en modo oscuro */
+body.dark-theme .navbar-light .navbar-nav .nav-link {
+    color: #ffffff !important; /* Cambiar color del texto de los enlaces en modo oscuro */
+}
+
+body.dark-theme .navbar-light .navbar-nav .nav-link:hover {
+    color: #17a2b8 !important; /* Color de los enlaces cuando están en hover en modo oscuro */
+}
+
+body.dark-theme .navbar-light {
+    background-color: #343a40 !important; /* Fondo oscuro de la navbar */
+}
+
+body.dark-theme .navbar-light .navbar-brand {
+    color: #ffffff !important; /* Cambiar el color de la marca (navbar-brand) en modo oscuro */
+}
+
+body.dark-theme .navbar-light .navbar-toggler-icon {
+    background-color: #ffffff !important; /* Cambiar el color del icono del toggle en modo oscuro */
+}
+
+body.dark-theme #theme-toggle-btn {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+body.dark-theme #theme-toggle-btn:hover {
+    background-color: #17a2b8;
+}

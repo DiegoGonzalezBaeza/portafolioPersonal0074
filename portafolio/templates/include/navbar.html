@@ -1,0 +1,51 @@
+{%load static%}
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">DG</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'blog' %}active{% endif %}" href="{% url 'blog' %}">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'proyectos' %}active{% endif %}" href="{% url 'proyectos' %}">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'contacto' %}active{% endif %}" href="{% url 'contacto' %}">Contacto</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ms-auto">
+       
+            <button id="theme-toggle-btn" class="btn btn-outline-secondary d-flex align-items-center">
+                <i id="theme-icon" class="bi bi-moon"></i>
+                <span class="ms-2"></span>
+            </button>
+
+        {% if request.user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'dashboard' %}">Hola, {{ request.user.username }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Cerrar sesión</a>
+            </li>
+        {% else %}
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'login' %}active{% endif %}" href="{% url 'login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'register' %}active{% endif %}" href="{% url 'register' %}">Register</a>
+            </li>
+        {% endif %}
+        </ul>
+
+      </div>
+    </div>
+  </nav>

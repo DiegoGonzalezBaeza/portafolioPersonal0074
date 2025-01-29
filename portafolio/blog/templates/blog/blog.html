@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+
+<!-- Título de la sección en negritas más fuertes y más separado -->
+<h1 class="text-center font-weight-bolder mt-5">Lista de Blogs</h1>
+<p class="text-center">Aquí encontrarás una lista de los blogs publicados en el sitio.</p>
+
+<div class="row">
+    {% for blog in blogs %}
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ blog.titulo }}</h5>
+                    <p class="card-text">
+                        <strong>Autor:</strong> {{ blog.autor }} <br>
+                        <strong>Fecha:</strong> {{ blog.fecha_de_publicacion }}
+                    </p>
+                    <a href="{% url 'blog_detalle' blog.id %}" class="btn btn-primary">Leer más</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
